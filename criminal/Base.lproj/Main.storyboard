@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="criminal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-K5-lNS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lug-cp-TO2"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YBT-eE-On3">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="1" green="0.069544673400000007" blue="0.079052300470000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzN-gG-UiG">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="usb-Wi-t2d">
+                                        <connections>
+                                            <action selector="goBack" destination="eKV-K5-lNS" id="e2V-hk-vJx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="A9V-5Z-rfb"/>
+                                    <barButtonItem systemItem="refresh" id="7Jo-6C-AZg">
+                                        <connections>
+                                            <action selector="reload" destination="eKV-K5-lNS" id="k0y-wV-Wc3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FzN-gG-UiG" firstAttribute="trailing" secondItem="eKV-K5-lNS" secondAttribute="trailing" id="1Yx-Kw-9wH"/>
+                            <constraint firstItem="YBT-eE-On3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="50n-8e-8Rc"/>
+                            <constraint firstItem="FzN-gG-UiG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5Jf-c0-Sjs"/>
+                            <constraint firstItem="FzN-gG-UiG" firstAttribute="leading" secondItem="eKV-K5-lNS" secondAttribute="leading" id="67u-xy-TGJ"/>
+                            <constraint firstItem="eKV-K5-lNS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ats-Ka-uGs"/>
+                            <constraint firstItem="FzN-gG-UiG" firstAttribute="centerX" secondItem="YBT-eE-On3" secondAttribute="centerX" id="BnI-mQ-fLp"/>
+                            <constraint firstItem="FzN-gG-UiG" firstAttribute="top" secondItem="eKV-K5-lNS" secondAttribute="bottom" id="KxI-p9-Jmd"/>
+                            <constraint firstItem="eKV-K5-lNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P1S-37-WQU"/>
+                            <constraint firstItem="eKV-K5-lNS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TKf-6n-emY"/>
+                            <constraint firstItem="YBT-eE-On3" firstAttribute="centerX" secondItem="eKV-K5-lNS" secondAttribute="centerX" id="lnV-ey-Y2X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="eKV-K5-lNS" id="w0F-WR-4G5"/>
+                        <outlet property="yuklemeScroll" destination="YBT-eE-On3" id="bba-XG-oMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
